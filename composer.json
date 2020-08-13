@@ -1,0 +1,32 @@
+{
+    "name": "liveecommerce/sigep",
+    "description": "Pacote com a integração do Sigep dos correios.",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "liveecommerce",
+            "email": "dev@liveecommerce.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Live\\Sigep\\Sigep\\": "src/Sigep/src",
+            "Live\\Sigep\\SoapClient\\": "src/SoapClient/src",
+            "Live\\Sigep\\PostCard\\": "src/PostCard/src",
+            "Live\\Sigep\\ShippingLabel\\": "src/ShippingLabel/src",
+            "Live\\Sigep\\DeliveryAvailability\\": "src/DeliveryAvailability/src",
+            "Live\\Sigep\\Address\\": "src/Address/src",
+            "Live\\Sigep\\PrePostingList\\": "src/PrePostingList/src",
+            "Live\\Sigep\\DeliverySuspension\\": "src/DeliverySuspension/src",
+            "Live\\Sigep\\AddressingLabel\\": "src/AddressingLabel/src",
+            "Live\\Sigep\\Barcode\\": "src/Barcode/src",
+            "Live\\Sigep\\PostList\\": "src/PostList/src"
+        }
+    },
+    "require": {
+        "spipu/html2pdf": "5.2.*"
+    }
+}
