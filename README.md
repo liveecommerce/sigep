@@ -7,19 +7,19 @@ Repositório de integração com o Sigep WEB dos Correios, para plataformas util
 **Composer**
 
 ```
-composer require liveecommerce/live-sigep
+composer require liveecommerce/sigep
 ```
 
 **GIT**
 
 Via SSH:
 ```
-git clone git@github.com:liveecommerce/live-sigep.git
+git clone git@github.com:liveecommerce/sigep.git
 ```
 
 Via HTTPs:
 ```
-git clone https://github.com/liveecommerce/live-sigep.git
+git clone https://github.com/liveecommerce/sigep.git
 ```
 
 
