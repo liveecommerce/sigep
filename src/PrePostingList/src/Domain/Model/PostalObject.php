@@ -63,6 +63,13 @@ class PostalObject
     private $invoiceNumber;
 
     /**
+     * Valor da nota fiscal
+     *
+     * @var string
+     */
+    private $invoiceValue;
+
+    /**
      * Serviços adicionais
      *
      * @var string
@@ -151,6 +158,7 @@ class PostalObject
      * @param string $declaredValue
      * @param string $neighborAddress
      * @param string $cellphone
+     * @param string $invoiceValue
      */
     public function __construct(
         Address $address,
@@ -168,7 +176,8 @@ class PostalObject
         string $additionalService = AdditionalServiceType::NATIONALREGISTRATION,
         string $declaredValue = '',
         string $neighborAddress = '',
-        string $cellphone = ''
+        string $cellphone = '',
+        string $invoiceValue = ''
     ) {
         $this->address = $address;
         $this->shippingLabel = $shippingLabel;
@@ -186,6 +195,7 @@ class PostalObject
         $this->neighborAddress = $neighborAddress;
         $this->documentNumber = $documentNumber;
         $this->cellphone = $cellphone;
+        $this->invoiceValue = $invoiceValue;
     }
 
     /**
@@ -239,13 +249,23 @@ class PostalObject
     }
 
     /**
-     * Retorna o valor da nota fiscal
+     * Retorna o número da nota fiscal
      *
      * @return string
      */
     public function getInvoiceNumber(): string
     {
         return $this->invoiceNumber;
+    }
+
+    /**
+     * Retorna o valor da nota fiscal
+     *
+     * @return string
+     */
+    public function getInvoiceValue(): string
+    {
+        return $this->invoiceValue;
     }
 
     /**

@@ -173,7 +173,7 @@ class GeneratePostListXmlService extends AbstractGenerateXml
                 'centro_custo_cliente' => '',
                 'numero_nota_fiscal' => $postalObject->getInvoiceNumber(),
                 'serie_nota_fiscal' => '',
-                'valor_nota_fiscal' => '',
+                'valor_nota_fiscal' => $postalObject->getInvoiceValue(),
                 'natureza_nota_fiscal' => '',
                 'descricao_objeto' => '',
                 'valor_a_cobrar' => ''
