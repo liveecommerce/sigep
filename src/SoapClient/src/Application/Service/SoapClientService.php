@@ -129,6 +129,12 @@ class SoapClientService extends AbstractGenerateXml
 
         $response = utf8_encode($response);
 
+        $unformattedResponse = strpos($data, 'solicitaXmlPlp');
+        if ($unformattedResponse) {
+            $response = trim(htmlspecialchars_decode($response));
+            $response = str_replace(["\r", "\n", '<?xml version="1.0" encoding="ISO-8859-1"?>'], '', $response);
+        }
+
         preg_match($this->regexError, $response, $xmlError);
         if ($xmlError[0]) {
             $object = simplexml_load_string("<response>" . $xmlError[0] . "</response>");
